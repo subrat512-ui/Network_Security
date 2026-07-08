@@ -6,5 +6,8 @@ Requires-Dist: python-dotenv
 Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: pymongo
+Requires-Dist: dotenv
+Requires-Dist: json
+Requires-Dist: certifi
 Dynamic: author
 Dynamic: requires-dist

@@ -2,5 +2,8 @@ python-dotenv
 pandas
 numpy
 pymongo
+dotenv
+json
+certifi
 
 -e .
