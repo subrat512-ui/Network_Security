@@ -2,8 +2,7 @@ python-dotenv
 pandas
 numpy
 pymongo
-dotenv
-json
 certifi
+scikit-learn
 
 -e .

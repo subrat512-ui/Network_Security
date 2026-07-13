@@ -3,7 +3,10 @@ setup.py
 networks/__init__.py
 networks/cloud/__init__.py
 networks/constants/__init__.py
+networks/constants/training_pipeline/__init__.py
 networks/entity/__init__.py
+networks/entity/artificats.py
+networks/entity/config.py
 networks/exception/__init__.py
 networks/exception/exception.py
 networks/logging/__init__.py

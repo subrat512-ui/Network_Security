@@ -1,0 +1,6 @@
+[ 2026-07-13 18:34:29,910 ] 11 root - INFO - Initiating training_pipeline_config
+[ 2026-07-13 18:34:29,910 ] 13 root - INFO - initiing data ingestion config
+[ 2026-07-13 18:34:29,910 ] 15 root - INFO - initiating data ingestion
+[ 2026-07-13 18:34:29,910 ] 17 root - INFO - creating artifact instance
+[ 2026-07-13 18:34:29,910 ] 29 root - INFO - Settting up mongoclient
+[ 2026-07-13 18:34:31,480 ] 49 root - INFO - saving data in feature store
