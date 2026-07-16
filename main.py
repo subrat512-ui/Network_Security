@@ -1,7 +1,8 @@
 from networks.exception.exception import NetworkSecurityException
 from networks.logging.logger import logging
 from networks.components.data_ingestion import DataIngestion
-from networks.entity.config import TrainingPipelineConfig,DataIngestionConfig
+from networks.components.data_validation import DataValaidation
+from networks.entity.config import TrainingPipelineConfig,DataIngestionConfig,DataValidationConfig
 import sys
 
 
@@ -17,5 +18,9 @@ if __name__=="__main__":
         logging.info("creating artifact instance")
         artifact=data_ingestion.initiate_data_ingestion()
         logging.info("executed data ingestion")
+        data_validation_config=DataValidationConfig(training_pipeline_config)
+        data_validation=DataValaidation(data_validation_config=data_validation_config,data_ingestion_artifact=artifact)
+        validation_artifact=data_validation.intialise_data_validation()
+
     except Exception as e:
         raise NetworkSecurityException(e,sys)

@@ -1,9 +1,0 @@
-[ 2026-07-13 18:45:32,486 ] 11 root - INFO - Initiating training_pipeline_config
-[ 2026-07-13 18:45:32,486 ] 13 root - INFO - initiing data ingestion config
-[ 2026-07-13 18:45:32,486 ] 15 root - INFO - initiating data ingestion
-[ 2026-07-13 18:45:32,486 ] 17 root - INFO - creating artifact instance
-[ 2026-07-13 18:45:32,486 ] 29 root - INFO - Settting up mongoclient
-[ 2026-07-13 18:45:38,676 ] 49 root - INFO - saving data in feature store
-[ 2026-07-13 18:45:38,762 ] 57 root - INFO - Performed Train test split
-[ 2026-07-13 18:45:38,762 ] 65 root - INFO - Saving training and test data
-[ 2026-07-13 18:45:38,843 ] 19 root - INFO - executed data ingestion
