@@ -9,5 +9,6 @@ Requires-Dist: pymongo
 Requires-Dist: certifi
 Requires-Dist: scikit-learn
 Requires-Dist: pyaml
+Requires-Dist: pickle
 Dynamic: author
 Dynamic: requires-dist

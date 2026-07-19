@@ -1,0 +1,93 @@
+Abnormal_URL:
+  drift_status: false
+  p_score: 0.9975567739681743
+DNSRecord:
+  drift_status: false
+  p_score: 0.5776803000731319
+Domain_registeration_length:
+  drift_status: false
+  p_score: 0.9997610012014628
+Favicon:
+  drift_status: false
+  p_score: 0.9999888959498077
+Google_Index:
+  drift_status: false
+  p_score: 0.9999997772661215
+HTTPS_token:
+  drift_status: false
+  p_score: 0.991922454955941
+Iframe:
+  drift_status: false
+  p_score: 1.0
+Links_in_tags:
+  drift_status: false
+  p_score: 0.9999968024420123
+Links_pointing_to_page:
+  drift_status: false
+  p_score: 1.0
+Page_Rank:
+  drift_status: false
+  p_score: 0.15128398415551503
+Prefix_Suffix:
+  drift_status: false
+  p_score: 1.0
+Redirect:
+  drift_status: false
+  p_score: 0.99999999945476
+Request_URL:
+  drift_status: false
+  p_score: 0.9995865036983179
+Result:
+  drift_status: false
+  p_score: 0.11226604049515176
+RightClick:
+  drift_status: false
+  p_score: 0.9999999999999148
+SFH:
+  drift_status: false
+  p_score: 0.9902897879882562
+SSLfinal_State:
+  drift_status: false
+  p_score: 0.5120602221400167
+Shortining_Service:
+  drift_status: false
+  p_score: 0.9999988894018609
+Statistical_report:
+  drift_status: false
+  p_score: 0.990289787988257
+Submitting_to_email:
+  drift_status: false
+  p_score: 0.999991733805822
+URL_Length:
+  drift_status: false
+  p_score: 1.0
+URL_of_Anchor:
+  drift_status: false
+  p_score: 0.2981786854590901
+age_of_domain:
+  drift_status: false
+  p_score: 0.9884283678259359
+double_slash_redirecting:
+  drift_status: false
+  p_score: 1.0
+having_At_Symbol:
+  drift_status: false
+  p_score: 0.999999999870135
+having_IP_Address:
+  drift_status: false
+  p_score: 0.3179707292785863
+having_Sub_Domain:
+  drift_status: false
+  p_score: 0.9999999439197564
+on_mouseover:
+  drift_status: false
+  p_score: 1.0
+popUpWidnow:
+  drift_status: false
+  p_score: 0.999980543412802
+port:
+  drift_status: false
+  p_score: 0.9998688545448693
+web_traffic:
+  drift_status: false
+  p_score: 0.4250909079449623

@@ -1,0 +1,15 @@
+[ 2026-07-19 17:54:31,459 ] 14 root - INFO - Initiating training_pipeline_config
+[ 2026-07-19 17:54:31,459 ] 16 root - INFO - initiing data ingestion config
+[ 2026-07-19 17:54:31,459 ] 18 root - INFO - initiating data ingestion
+[ 2026-07-19 17:54:31,459 ] 20 root - INFO - creating artifact instance
+[ 2026-07-19 17:54:31,459 ] 29 root - INFO - Settting up mongoclient
+[ 2026-07-19 17:54:36,065 ] 49 root - INFO - saving data in feature store
+[ 2026-07-19 17:54:36,151 ] 57 root - INFO - Performed Train test split
+[ 2026-07-19 17:54:36,151 ] 65 root - INFO - Saving training and test data
+[ 2026-07-19 17:54:36,233 ] 22 root - INFO - executed data ingestion
+[ 2026-07-19 17:54:36,260 ] 30 root - INFO - no. of columns in schema31
+
+[ 2026-07-19 17:54:36,260 ] 31 root - INFO - no. of columns in data frame31
+[ 2026-07-19 17:54:36,260 ] 30 root - INFO - no. of columns in schema31
+
+[ 2026-07-19 17:54:36,260 ] 31 root - INFO - no. of columns in data frame31

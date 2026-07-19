@@ -5,14 +5,5 @@ pymongo
 certifi
 scikit-learn
 pyaml
-pickle
-
-
-
-
-
-
-
-
 
 -e .

@@ -1,0 +1,93 @@
+Abnormal_URL:
+  drift_status: false
+  p_score: 0.9999671272734229
+DNSRecord:
+  drift_status: false
+  p_score: 0.9995088059095283
+Domain_registeration_length:
+  drift_status: false
+  p_score: 0.7680313743320611
+Favicon:
+  drift_status: false
+  p_score: 0.9999977235497168
+Google_Index:
+  drift_status: false
+  p_score: 0.9997610012014628
+HTTPS_token:
+  drift_status: false
+  p_score: 0.7680313743320533
+Iframe:
+  drift_status: false
+  p_score: 1.0
+Links_in_tags:
+  drift_status: false
+  p_score: 0.9999999999981217
+Links_pointing_to_page:
+  drift_status: false
+  p_score: 0.9999745994767623
+Page_Rank:
+  drift_status: false
+  p_score: 0.999999999988434
+Prefix_Suffix:
+  drift_status: false
+  p_score: 0.9998388206083407
+Redirect:
+  drift_status: false
+  p_score: 0.9998939831095225
+Request_URL:
+  drift_status: false
+  p_score: 0.8047373429702858
+Result:
+  drift_status: false
+  p_score: 0.9999999999992943
+RightClick:
+  drift_status: false
+  p_score: 1.0
+SFH:
+  drift_status: false
+  p_score: 0.9999999439197564
+SSLfinal_State:
+  drift_status: false
+  p_score: 0.9001044545868322
+Shortining_Service:
+  drift_status: false
+  p_score: 0.9039295322201301
+Statistical_report:
+  drift_status: false
+  p_score: 0.7786981711104352
+Submitting_to_email:
+  drift_status: false
+  p_score: 0.9997610012014628
+URL_Length:
+  drift_status: false
+  p_score: 1.0
+URL_of_Anchor:
+  drift_status: false
+  p_score: 0.9893886637702569
+age_of_domain:
+  drift_status: false
+  p_score: 0.6283093899388315
+double_slash_redirecting:
+  drift_status: false
+  p_score: 0.7353423319035752
+having_At_Symbol:
+  drift_status: false
+  p_score: 1.0
+having_IP_Address:
+  drift_status: false
+  p_score: 0.8487839446728636
+having_Sub_Domain:
+  drift_status: false
+  p_score: 0.8047373429702858
+on_mouseover:
+  drift_status: false
+  p_score: 1.0
+popUpWidnow:
+  drift_status: false
+  p_score: 0.9933426287191623
+port:
+  drift_status: false
+  p_score: 0.9999321298038519
+web_traffic:
+  drift_status: false
+  p_score: 0.9999999999999999

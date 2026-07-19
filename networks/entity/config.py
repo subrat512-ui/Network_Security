@@ -65,3 +65,11 @@ class DataTranformationConfig:
         self.train_file_path=os.path.join(self.data_transformation_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,training_pipeline.DATA_TRANSFORMATION_TRAIN_FILE_PATH.replace("csv","npy"))
         self.test_file_path=os.path.join(self.data_transformation_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR,training_pipeline.DATA_TRANSFORMATION_TEST_FILE_PATH.replace("csv","npy"))
         self.data_transformed_object=os.path.join(self.data_transformation_dir,training_pipeline.DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,training_pipeline.PREPROCESSING_OBJECT_FILE_NAME)
+
+
+
+class ModelTrainerConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_trainer=os.path.join(training_pipeline_config.artifact_dir,training_pipeline.MODEL_TRAINED_DIR_NAME)
+        self.trained_model_file=os.path.join(self.model_trainer,training_pipeline.MODEL_TRAINED_DIR_NAME,training_pipeline.MODEL_TRAINER_FILE_NAME)
+        

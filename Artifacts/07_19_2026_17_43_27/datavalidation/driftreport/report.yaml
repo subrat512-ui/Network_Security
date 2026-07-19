@@ -1,0 +1,93 @@
+Abnormal_URL:
+  drift_status: false
+  p_score: 1.0
+DNSRecord:
+  drift_status: false
+  p_score: 0.17067902861744932
+Domain_registeration_length:
+  drift_status: false
+  p_score: 0.9999671272734229
+Favicon:
+  drift_status: false
+  p_score: 0.7572410755183526
+Google_Index:
+  drift_status: false
+  p_score: 0.9999939100687764
+HTTPS_token:
+  drift_status: false
+  p_score: 0.9999999999999148
+Iframe:
+  drift_status: false
+  p_score: 0.9999992399051418
+Links_in_tags:
+  drift_status: false
+  p_score: 0.9956127615648805
+Links_pointing_to_page:
+  drift_status: false
+  p_score: 0.9999321298038519
+Page_Rank:
+  drift_status: false
+  p_score: 0.999999999999748
+Prefix_Suffix:
+  drift_status: false
+  p_score: 0.5281942333058314
+Redirect:
+  drift_status: false
+  p_score: 0.9999999881751745
+Request_URL:
+  drift_status: false
+  p_score: 0.9964968277601532
+Result:
+  drift_status: true
+  p_score: 0.04910917134345272
+RightClick:
+  drift_status: false
+  p_score: 0.963651411606526
+SFH:
+  drift_status: false
+  p_score: 0.9999999999999148
+SSLfinal_State:
+  drift_status: true
+  p_score: 0.042354792360436155
+Shortining_Service:
+  drift_status: false
+  p_score: 0.9999999999999999
+Statistical_report:
+  drift_status: false
+  p_score: 1.0
+Submitting_to_email:
+  drift_status: false
+  p_score: 1.0
+URL_Length:
+  drift_status: false
+  p_score: 1.0
+URL_of_Anchor:
+  drift_status: false
+  p_score: 0.20632526503411341
+age_of_domain:
+  drift_status: false
+  p_score: 0.884074364741792
+double_slash_redirecting:
+  drift_status: false
+  p_score: 0.9999745994767623
+having_At_Symbol:
+  drift_status: false
+  p_score: 0.4011656710279672
+having_IP_Address:
+  drift_status: false
+  p_score: 1.0
+having_Sub_Domain:
+  drift_status: false
+  p_score: 0.8962052133346649
+on_mouseover:
+  drift_status: false
+  p_score: 0.8534124262698983
+popUpWidnow:
+  drift_status: false
+  p_score: 0.9978473549005954
+port:
+  drift_status: false
+  p_score: 0.9933426287191627
+web_traffic:
+  drift_status: false
+  p_score: 0.9902897879882565

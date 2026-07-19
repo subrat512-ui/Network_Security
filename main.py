@@ -3,7 +3,8 @@ from networks.logging.logger import logging
 from networks.components.data_ingestion import DataIngestion
 from networks.components.data_validation import DataValaidation
 from networks.components.data_tranformation import DataTransformation
-from networks.entity.config import TrainingPipelineConfig,DataIngestionConfig,DataValidationConfig,DataTranformationConfig
+from networks.components.model_trainer import ModelTrainer
+from networks.entity.config import TrainingPipelineConfig,DataIngestionConfig,DataValidationConfig,DataTranformationConfig,ModelTrainerConfig
 import sys
 
 
@@ -25,6 +26,9 @@ if __name__=="__main__":
         data_tranformation_config=DataTranformationConfig(training_pipeline_config=training_pipeline_config)
         data_tranformation=DataTransformation(data_tranformation_config=data_tranformation_config,data_validation_artifact=validation_artifact)
         data_tranformation_artifact=data_tranformation.initiate_data_tranformation()
+        model_trainer_config=ModelTrainerConfig(training_pipeline_config)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,data_tranformation_artifact=data_tranformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
 
     except Exception as e:
         raise NetworkSecurityException(e,sys)
