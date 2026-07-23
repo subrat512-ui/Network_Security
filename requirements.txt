@@ -5,5 +5,8 @@ pymongo
 certifi
 scikit-learn
 pyaml
+fastapi
+uvicorn
+
 
 -e .

@@ -26,9 +26,9 @@ class ModelTrainer:
 
     def train_models(self, X_train, Y_train, X_test, Y_test):
         models = {
-            "Random Forest": RandomForestClassifier(verbose=0),
+            "Random Forest": RandomForestClassifier(verbose=1),
             "Decision Tree": DecisionTreeClassifier(),
-            "Gradient Boosting": GradientBoostingClassifier(verbose=0),
+            "Gradient Boosting": GradientBoostingClassifier(verbose=1),
             "Logistic Regression": LogisticRegression(),
             "AdaBoost": AdaBoostClassifier(),
         }
@@ -88,6 +88,8 @@ class ModelTrainer:
                 f"exceeds allowed difference ({training_pipeline.MODEL_ACCURACY_TRAIN_TEST_DIFFERENCE})",
                 sys
             )
+        
+        save_obj(file_path='/Users/subrat/Desktop/Network_Security/final_model/model.pkl',obj=best_model)
 
         return [classification_test_artifact, classification_train_artifact, best_model]
 

@@ -83,7 +83,7 @@ def evaluate(X_train, Y_train, X_test, Y_test, models, param):
             n_iter = min(10, sum(len(v) for v in para.values()) or 1) if para else 1
             rs = RandomizedSearchCV(
                 model, para, cv=3, n_iter=n_iter,
-                n_jobs=-1, random_state=42
+                n_jobs=1, random_state=42
             )
             rs.fit(X_train, Y_train)
 
