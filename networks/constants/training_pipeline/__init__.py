@@ -11,6 +11,8 @@ TARGET_COLUMN = "Result"
 PIPELINE_NAME: str = "NetworkSecurity"
 ARTIFACT_DIR: str = "Artifacts"
 FILE_NAME: str = "phisingData.csv"
+BUCKET_NAME="networks-s3-bucket"
+SAVED_MODEL_DIR=os.path.join("final_model")
  
 TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"

@@ -16,14 +16,15 @@ from networks.components.data_ingestion import DataIngestion
 from networks.components.data_validation import DataValaidation
 from networks.components.data_tranformation import DataTransformation
 from networks.components.model_trainer import ModelTrainer
-
-
+from networks.cloud.data_sync import S3Sync
+from networks.constants.training_pipeline import SAVED_MODEL_DIR,BUCKET_NAME,ARTIFACT_DIR
 class TrainingPipeline():
     def __init__(self, training_pipeline_config: TrainingPipelineConfig = None):
         try:
             if training_pipeline_config is None:
                 training_pipeline_config = TrainingPipelineConfig()
             self.training_pipeline_config = training_pipeline_config
+            self.s3_sync=S3Sync()
         except Exception as e:
             raise NetworkSecurityException(e, sys)
 
@@ -101,13 +102,34 @@ class TrainingPipeline():
             raise NetworkSecurityException(e, sys)
         
 
+    def saved_artifact_dir(self):
+        try:
+            bucket_url= f"s3://{BUCKET_NAME}/artifact/{self.training_pipeline_config.timestamp}"
+            self.s3_sync.sync_folder_to_s3(folder=self.training_pipeline_config.artifact_dir,aws_bucket_url=bucket_url)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+
+    def saved_model_dir(self):
+        try:
+            bucket_url= f"s3://{BUCKET_NAME}/model/{self.training_pipeline_config.timestamp}"
+            self.s3_sync.sync_folder_to_s3(folder=self.training_pipeline_config.model_dir,aws_bucket_url=bucket_url)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+
+
+    
     def run_pipeline(self):
         try:
             model_trainer_artifact = self.start_model_trainer()
+            self.saved_artifact_dir()
+            self.saved_model_dir()
             logging.info("Training pipeline completed successfully")
             return model_trainer_artifact
         except Exception as e:
             raise NetworkSecurityException(e, sys)
+    
+
+    
 
 
 if __name__ == "__main__":

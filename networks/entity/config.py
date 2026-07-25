@@ -11,6 +11,8 @@ class TrainingPipelineConfig:
         # every run gets its own timestamped folder, e.g. Artifacts/07_08_2026_10_30_00
         self.artifact_dir = os.path.join(self.artifact_name, timestamp)
         self.timestamp: str = timestamp
+        self.model_dir_name=training_pipeline.SAVED_MODEL_DIR
+        self.model_dir=os.path.join(self.model_dir_name)
 
 
 class DataIngestionConfig:

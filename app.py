@@ -10,6 +10,7 @@ ca=certifi.where()
 from dotenv import  load_dotenv
 load_dotenv()
 mongo_db_url=os.getenv("MONGO_DB_URI")
+print("Mongo URI:", repr(mongo_db_url))
 from networks.utils.main_utils.utils import load_obj
 from fastapi import FastAPI,UploadFile,Request,File
 import pandas as pd
