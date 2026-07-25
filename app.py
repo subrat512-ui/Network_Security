@@ -47,24 +47,49 @@ async def train():
 @app.post('/predict')
 async def predict_data(request:Request,file:UploadFile=File(...)):
     try:
+        # Read CSV normally (no index_col) so feature columns are not consumed as index
         df=pd.read_csv(file.file)
+
+        # Drop the pandas index artifact if it slipped through (saved without index=False)
+        if 'Unnamed: 0' in df.columns:
+            df = df.drop(columns=['Unnamed: 0'])
+
+        print("Uploaded CSV columns:", list(df.columns))
+
         preprocesser=load_obj(file_path="final_model/preprocessor.pkl")
         model=load_obj(file_path="final_model/model.pkl")
         network_model=NetworkModel(preproceesor=preprocesser,model=model)
         print(df.iloc[0])
+
+        # Align columns to what the preprocessor was trained on
+        expected_features = list(preprocesser.feature_names_in_)
+        missing = [c for c in expected_features if c not in df.columns]
+        if missing:
+            # Raise a plain exception so the outer except handler wraps it
+            # (NetworkSecurityException uses sys.exc_info() which only works inside an except block)
+            raise ValueError(
+                f"Uploaded CSV is missing required feature columns: {missing}. "
+                f"Expected columns: {expected_features}"
+            )
+        df = df[expected_features]
+
         y_pred=network_model.predict(df)
         print(y_pred)
         df["predicted column"]=y_pred
         os.makedirs("predicted_data", exist_ok=True)
-        df.to_csv("predicted_data/output.csv")
-        df.to_csv("predicted_data/output.csv")
+        df.to_csv("predicted_data/output.csv", index=False)
         table_html = df.to_html(classes='table table-striped')
-        #print(table_html)
-        return templates.TemplateResponse("table.html", {"request": request, "table": table_html})
+        print(table_html)
+        return templates.TemplateResponse(request, "table.html", {"table": table_html})
 
     except Exception as e:
-        raise NetworkSecurityException(e,sys)
+        # Defensive: if exc_info() returns no traceback (e.g. re-raised), still surface the error
+        try:
+            raise NetworkSecurityException(e, sys)
+        except AttributeError:
+            raise NetworkSecurityException(str(e), sys) from e
 
 
 if __name__=="__main__":
+
     app_run(app,host="0.0.0.0",port=8000)

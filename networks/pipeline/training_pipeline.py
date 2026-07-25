@@ -99,6 +99,7 @@ class TrainingPipeline():
             return model_trainer_artifact
         except Exception as e:
             raise NetworkSecurityException(e, sys)
+        
 
     def run_pipeline(self):
         try:

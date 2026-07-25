@@ -78,11 +78,11 @@ class DataValaidation:
             valid_train_data=os.path.join(self.data_validation_config.vaild_train_data_file_path)
             dir_name=os.path.dirname(valid_train_data)
             os.makedirs(dir_name,exist_ok=True)
-            train_data.to_csv(valid_train_data)
+            train_data.to_csv(valid_train_data, index=False, header=True)
             valid_test_data=os.path.join(self.data_validation_config.vaild_test_data_file_path)
             dir_name=os.path.dirname(valid_test_data)
             os.makedirs(dir_name,exist_ok=True)
-            test_data.to_csv(valid_test_data)
+            test_data.to_csv(valid_test_data, index=False, header=True)
 
             data_validation_artifact=DataValidationArtifact(validation_status=not status,valid_train_file_path=self.data_validation_config.vaild_train_data_file_path,valid_test_file_path=self.data_validation_config.vaild_test_data_file_path,invalid_train_file_path=self.data_validation_config.invaild_train_data_file_path,invalid_test_file_path=self.data_validation_config.invaild_test_data_file_path,drift_report_file_path=self.data_validation_config.drift_report_dir)
             return data_validation_artifact
